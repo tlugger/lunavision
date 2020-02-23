@@ -11,6 +11,7 @@ from datetime import datetime, date
 import numpy as np
 import argparse
 import imutils
+import logging
 import signal
 import time
 import cv2
@@ -62,7 +63,7 @@ while True:
 		break
 
 	# resize the frame and convert the frame to grayscale
-	frame = imutils.resize(frame, width=200)
+	frame = imutils.resize(frame, width=400)
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 	# if the frame dimensions are empty, set them
@@ -87,7 +88,7 @@ while True:
 		tempVideo = TempFile(ext=".mp4", basePath="./temp_videos")
 		
 		fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-		writer = cv2.VideoWriter(tempVideo.path, fourcc, 10, (W, H),
+		writer = cv2.VideoWriter(tempVideo.path, fourcc, 60, (W, H),
 			True)
 
 	# if Luna was in frame but has suddenly left the frame
@@ -120,7 +121,8 @@ while True:
 			writer = None
 
 			# send the message and the video to the owner
-			tn.send(msg, tempVideo)
+			print("[INFO] Sending: {}".format(msg)) #TODO: actually send
+			# tn.send(msg, tempVideo)
 
 	# check to see if we should write the frame to disk
 	if writer is not None:
