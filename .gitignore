@@ -11,3 +11,6 @@ __pycache__/
 
 # Mac files (I know I could globally ignore these but ¯\_(ツ)_/¯)
 .DS_Store
+
+# Project temporary files
+*.mp4
