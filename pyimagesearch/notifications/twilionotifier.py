@@ -22,7 +22,6 @@ class TwilioNotifier:
 
 		# get the filename and upload the video in public read mode
 		filename = tempVideo.path[tempVideo.path.rfind("/") + 1:]
-		print("TEMP VIDEO PATH: {}".format(tempVideo.path))
 		s3.upload_file(tempVideo.path, self.conf["s3_bucket"],
 			filename, ExtraArgs={"ACL": "public-read",
 			"ContentType": "video/mp4"})

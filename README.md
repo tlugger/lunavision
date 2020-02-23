@@ -24,13 +24,7 @@ Run
 - Create your config/config.json file:
 ```
 {
-	// two constants, first threshold for detecting if the
-	// refrigerator is open, and a second threshold for the number of
-	// seconds the refrigerator is open
-	"thresh": 50,
-	"open_threshold_seconds": 60,
-
-	// variables to store your aws account credentials
+    // variables to store your aws account credentials
 	"aws_access_key_id": "YOUR_AWS_ACCESS_KEY_ID",
 	"aws_secret_access_key": "YOUR_AWS_SECRET_ACCESS_KEY",
 	"s3_bucket": "YOUR_AWS_S3_BUCKET",
