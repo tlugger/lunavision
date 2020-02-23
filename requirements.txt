@@ -1,0 +1,6 @@
+picamera[array]
+opencv-contrib-python==4.1.0.25
+imutils
+twilio
+boto3
+json-minify
