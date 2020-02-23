@@ -8,3 +8,6 @@ config/config.json
 # Compiled Python files
 __pycache__/
 *.py[cod]
+
+# Mac files (I know I could globally ignore these but ¯\_(ツ)_/¯)
+.DS_Store
