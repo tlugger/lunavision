@@ -1,0 +1,6 @@
+# Dev Environment files
+.vscode
+venv
+
+# 3rd party access keys
+config/config.json
